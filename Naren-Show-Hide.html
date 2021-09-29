@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Password</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+   <style>
+      
+       div{
+           margin: 20px;
+           border: 2px solid red;
+           padding: 20px;
+       }
+   </style>
+
+</head>
+<body>
+    <div>
+        <label for="paswword">Password : </label>
+        <input type="password" name="password" id="psw" placeholder="password">
+        <i class="fa fa-eye-slash eye"></i>
+    </div>
+    <script>
+        let eye = document.querySelector(".eye");
+        let psw  = document.querySelector("#psw");
+        eye.addEventListener("click",changeType);
+        function changeType()
+        {          
+           if(psw.type === "password")
+           {
+               psw.type ="text";
+               eye.className ="fa fa-eye";
+               
+           }
+           else
+           {
+                psw.type ="password";
+               eye.className ="fa fa-eye-slash";
+           }
+        }
+    </script>
+   
+</body>
+</html>
